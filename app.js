@@ -11,7 +11,7 @@ function addData() {
     var newData = document.createElement("div");
     newData.innerHTML = `       
      <div class="todo-item">
-      <span class="todo-text"></span>
+      <span class="todo-text">${getUserValue}</span>
       <div class="todo-actions">
         <button><i class="far fa-edit"></i></button>
         <button onclick="deleteData()" class="delete">
