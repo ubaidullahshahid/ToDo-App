@@ -7,7 +7,6 @@ onloadeddata();
 function onloadeddata() {
   var newData = "";
   getData.forEach((element, index) => {
-    console.log("element", element);
     newData += `       
   <div class="todo-item">
    <div><span class="todo-text">${index + 1}.</span>
