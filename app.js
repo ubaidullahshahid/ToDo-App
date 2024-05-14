@@ -10,12 +10,12 @@ function onloadeddata() {
     console.log("element", element);
     newData += `       
   <div class="todo-item">
-   <div><span class="todo-text">${index + 1}</span>
+   <div><span class="todo-text">${index + 1}.</span>
    <span class="todo-text">${element}</span></div>
    <div class="todo-actions">
-     <button onclick="handleEdit(${index})"><i class="far fa-edit"></i></button>
+     <button onclick="handleEdit(${index})"><i class="far fa-edit" style="color: #0C680D;"></i></button>
      <button onclick="deleteData(${index})" class="delete">
-     <i class="far fa-trash-alt" ></i></button>
+     <i class="far fa-trash-alt" style="color: red;"></i></button>
    </div>
    </div>`;
     toDoList.innerHTML = newData;
@@ -23,9 +23,9 @@ function onloadeddata() {
 }
 function addData() {
   var getUserValue = userValue.value;
-  getData.push(getUserValue);
-  localStorage.setItem("todo-actions", JSON.stringify(getData));
   if (getUserValue) {
+    getData.push(getUserValue);
+    localStorage.setItem("todo-actions", JSON.stringify(getData));
     onloadeddata();
   } else {
     alert("Please enter a value");
